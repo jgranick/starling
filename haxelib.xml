@@ -1,0 +1,7 @@
+<project name="starling" url="http://github.com/jgranick/starling" license="MIT">
+    <user name="elyon"/>
+    <tag v="flash"/>
+    <tag v="cpp"/>
+    <description>Starling is an abstraction layer over Stage3D in order to accelerate performance of Flash 2D projects.</description>
+    <version name="1.00">Initial externs for Starling</version>
+</project>
