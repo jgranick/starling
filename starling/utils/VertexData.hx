@@ -19,18 +19,18 @@ extern class VertexData {
 	function new (numVertices:Int, premultipliedAlpha:Bool = false):Void;
 	
 	function clone (vertexID:Int = 0, numVertices:Int = -1):VertexData;
-	function copyTo (targetData:VertexData, targetVertexID:Int = 0):Void;
+	function copyTo (targetData:VertexData, targetVertexID:Int = 0, vertexID:Int = 0, numVertices:Int = -1):Void;
 	function append (data:VertexData):Void;
-	function setPosition (vertexID:Int, x:Float, y:Float, z:Float = 0.0):Void;
-	function getPosition (vertexID:Int, position:Vector3D):Void;
+	function setPosition (vertexID:Int, x:Float, y:Float):Void;
+	function getPosition (vertexID:Int, position:Point):Void;
 	function setColor (vertexID:Int, color:UInt):Void;
 	function getColor (vertexID:Int):UInt;
 	function setAlpha (vertexID:Int, alpha:Float):Void;
 	function getAlpha (vertexID:Int):Float;
 	function setTexCoords (vertexID:Int, u:Float, v:Float):Void;
 	function getTexCoords (vertexID:Int, texCoords:Point):Void;
-	function translateVertex (vertexID:Int, deltaX:Float, deltaY:Float, deltaZ:Float = 0.0):Void;
-	function transformVertex (vertexID:Int, matrix:Matrix3D, numVertices:Int = 1):Void;
+	function translateVertex (vertexID:Int, deltaX:Float, deltaY:Float):Void;
+	function transformVertex (vertexID:Int, matrix:Matrix, numVertices:Int = 1):Void;
 	function setUniformColor (color:UInt):Void;
 	function setUniformAlpha (alpha:Float):Void;
 	function scaleAlpha (vertexID:Int, alpha:Float, numVertices:Int = 1):Void;

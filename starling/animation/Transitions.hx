@@ -21,8 +21,6 @@ extern class Transitions {
 	static var EASE_OUT_BOUNCE:String;
 	static var EASE_IN_OUT_BOUNCE:String;
 	static var EASE_OUT_IN_BOUNCE:String;
-	
- 	function new ():Void;
  	
  	static function getTransition (name:String):Dynamic;
  	static function register (name:String, func:Dynamic):Void;

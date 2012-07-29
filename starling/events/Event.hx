@@ -16,7 +16,7 @@ extern class Event {
 	static var ROOT_CREATED:String;
 	static var REMOVE_FROM_JUGGLER:String;
 	
-	function new (type:String, bubbles:Bool = false):Void;
+	function new (type:String, bubbles:Bool = false, data:Dynamic = null):Void;
 	
 	function stopPropogation ():Void;
 	function stopImmediatePropogation ():Void;
@@ -26,5 +26,6 @@ extern class Event {
 	var target (default, null):EventDispatcher;
 	var currentTarget (default, null):EventDispatcher;
 	var type (default, null):String;
+	var data (default, null):Dynamic;
 	
 }

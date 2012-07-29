@@ -11,7 +11,7 @@ import starling.utils.VertexData;
 
 extern class Texture { 
 	
-	function new ():Void;
+	//function new ():Void;
 	
 	function dispose ():Void;
 	static function fromBitmap (data:Bitmap, generateMipMaps:Bool = true, optimizeForRenderTexture:Bool = false, scale:Float = 1):Texture;
@@ -27,6 +27,7 @@ extern class Texture {
 	var height (default, null):Float;
 	var scale (default, null):Float;
 	var base (default, null):TextureBase;
+	var format (default, null):String;
 	var mipMapping (default, null):Bool;
 	var premultipliedAlpha (default, null):Bool;
 	

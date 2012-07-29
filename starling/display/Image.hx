@@ -13,7 +13,7 @@ extern class Image extends Quad {
 	static function fromBitmap (bitmap:Bitmap):Image;
 	function readjustSize():Void;
 	function setTexCoords (vertexID:Int, coords:Point):Void;
-	function getTexCoords (vertexID:Int):Point;
+	function getTexCoords (vertexID:Int, resultPoint:Point = null):Point;
 	
 	var texture:Texture;
 	var smoothing:String;

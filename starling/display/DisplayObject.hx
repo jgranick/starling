@@ -10,18 +10,20 @@ import starling.events.EventDispatcher;
 
 extern class DisplayObject extends EventDispatcher {
 	
-	function new ():Void;
+	//function new ():Void;
 	
 	function dispose ():Void;
 	function removeFromParent (dispose:Bool = false):Void;
 	function getTransformationMatrix (targetSpace:DisplayObject, resultMatrix:Matrix = null):Matrix;
+	
+	var transformationMatrix:Matrix;
+	
 	function getBounds (targetSpace:DisplayObject, resultRect:Rectangle = null):Rectangle;
 	function hitTest (localPoint:Point, forTouch:Bool = false):DisplayObject;
-	function localToGlobal (localPoint:Point):Point;
-	function globalToLocal (globalPoint:Point):Point;
+	function localToGlobal (localPoint:Point, resultPoint:Point = null):Point;
+	function globalToLocal (globalPoint:Point, resultPoint:Point = null):Point;
 	function render (support:RenderSupport, parentAlpha:Float):Void;
 	
-	var transformationMatrix (default, null):Matrix;
 	var bounds (default, null):Rectangle;
 	var width:Float;
 	var height:Float;
@@ -32,6 +34,8 @@ extern class DisplayObject extends EventDispatcher {
 	var pivotY:Float;
 	var scaleX:Float;
 	var scaleY:Float;
+	var skewX:Float;
+	var skewY:Float;
 	var rotation:Float;
 	var alpha:Float;
 	var visible:Bool;
@@ -39,6 +43,8 @@ extern class DisplayObject extends EventDispatcher {
 	var blendMode:String;
 	var name:String;
 	var parent (default, null):DisplayObjectContainer;
+	var base (default, null):DisplayObject;
+	var root (default, null):DisplayObject;
 	var stage (default, null):Stage;
 	
 }

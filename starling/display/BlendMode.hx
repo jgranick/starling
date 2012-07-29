@@ -6,8 +6,6 @@ import flash.display3D.Context3DBlendFactor;
 
 extern class BlendMode {
 	
-	static function new ():Void;
-	
 	static var AUTO:String;
 	static var NONE:String;
 	static var NORMAL:String;

@@ -5,7 +5,7 @@ import flash.display.BitmapData;
 import flash.geom.Rectangle;
 
 
-extern class TextField extends DisplayObjectOthainr {
+extern class TextField extends DisplayObjectContainer {
 	
 	function new (width:int, height:Int, text:String, fontName:String, fontSize:Float = 12, char:UInt = 0x0, bold:Bool):Void;
 	
@@ -25,7 +25,8 @@ extern class TextField extends DisplayObjectOthainr {
 	var kerning:Bool;
 	var autoScale:Bool;
 	
-	static function registerBitmapFont (bitmapFont:BitmapFont):Void;
+	static function registerBitmapFont (bitmapFont:BitmapFont, name:String = null):Void;
 	static function unregisterBitmapFont (name:String, dispose:Bool = true):Void;
+	static function getBitmapFont (name:String):BitmapFont;
 	
 }

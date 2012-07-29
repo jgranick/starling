@@ -3,7 +3,7 @@ package starling.utils;
 
 extern class VAlign {
 	
-	function new ():Void;
+	//function new ():Void;
 	
 	static var TOP:String;
 	static var CENTER:String;

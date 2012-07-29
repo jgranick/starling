@@ -9,9 +9,9 @@ extern class Touch {
 	
 	function new (id:Int, globalX:Float, globalY:Float, phase:String, target:DisplayObject):Void;
 	
-	function getLocation (space:DisplayObject):Point;
-	function getPreviousLocation (space:DisplayObject):Point;
-	function getMovement (space:DisplayObject):Point;
+	function getLocation (space:DisplayObject, resultPoint:Point = null):Point;
+	function getPreviousLocation (space:DisplayObject, resultPoint:Point = null):Point;
+	function getMovement (space:DisplayObject, resultPoint:Point = null):Point;
 	function toString ():String;
 	function clone ():Touch;
 	

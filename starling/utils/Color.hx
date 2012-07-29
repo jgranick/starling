@@ -27,6 +27,6 @@ extern class Color {
 	static function rgb (red:Int, green:Int, blue:Int):UInt;
 	static function argb (alpha:Int, red:Int, green:Int, blue:Int):UInt;
 	
-	function new ():Void;
+	//function new ():Void;
 	
 }

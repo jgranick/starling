@@ -18,10 +18,13 @@ import starling.events.TouchPhase;
 
 extern class Starling extends EventDispatcher {
 	
-	static var VERSION:String = "1.1";
+	static var VERSION:String = "1.2";
 	
-	function new (rootClass:Dynamic, stage:flash.display.Stage, viewPort:Rectangle = null, stage3D:Stage3D = null, renderMode:String = "auto"):Void;
+	function new (rootClass:Dynamic, stage:flash.display.Stage, viewPort:Rectangle = null, stage3D:Stage3D = null, renderMode:String = "auto", profile:String = "baselineConstrained"):Void;
 	
+	function nextFrame ():Void;
+	function advanceTime (passedTime:Float):Void;
+	function render ():Void;
 	function dispose ():Void;
 	function makeCurrent ():Void;
 	function start ():Void;
@@ -41,9 +44,15 @@ extern class Starling extends EventDispatcher {
 	//var contentScaleFactor (default, null):Float;
 	var nativeOverlay (default, null):Sprite;
 	var showStats:Bool;
+	
+	function showStatsAt (hAlign:String = "left", vAlign:String = "top"):Void;
+	
 	var stage (default, null):Stage;
 	var stage3D (default, null):Stage3D;
 	var nativeStage (default, null):flash.display.Stage;
+	
+	var root (default, null):DisplayObject;
+	var shareContext:Bool;
 	
 	static var current (default, null):Starling;
 	static var context (default, null):Context3D;

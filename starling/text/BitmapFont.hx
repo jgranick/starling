@@ -14,6 +14,7 @@ extern class BitmapFont {
 	function dispose ():Void;
 	function getChar (charID:Int):BitmapChar;
 	function addChar (charID:Int, bitmapChar:BitmapChar):Void;
+	function createSprite (width:Float, height:Float, text:String, fontSize:Float = -1, color:UInt = 0xffffff, hAlign:String = "center", vAlign:String = "center", autoScale:Bool = true, kerning:Bool = true):Sprite;
 	function fillQuadBatch (quadBatch:QuadBatch, width:Float, height:Float, text:String, fontSize:Float = -1, color:UInt = 0xFFFFFF, hAlign:String = "center", vAlign:String = "center", autoScale:Bool = true, kerning:Bool = true):Void;
 	
 	var name (default, null):String;

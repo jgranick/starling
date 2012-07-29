@@ -3,7 +3,7 @@ package starling.utils;
 
 extern class HAlign {
 	
-	function new ():Void;
+	//function new ():Void;
 	
 	static var LEFT:String;
 	static var CENTER:String;

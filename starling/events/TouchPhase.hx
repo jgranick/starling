@@ -3,7 +3,7 @@ package starling.events;
 
 extern class TouchPhase {
 	
-	function new ():Void;
+	//function new ():Void;
 	
 	static var HOVER:String;
 	static var BEGAN:String;

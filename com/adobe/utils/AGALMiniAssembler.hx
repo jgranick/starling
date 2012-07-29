@@ -6,12 +6,13 @@ import flash.utils.ByteArray;
 
 extern class AGALMiniAssembler {
 	
+	var verbose:Bool;
 	var error (default, null):String;
 	var agalcode (default, null):ByteArray;
 	
 	function new (debugging:Bool = false):Void;
 	
-	function assemble (mode:String, source:String, verbose:Bool = false):ByteArray;
+	function assemble (mode:String, source:String):ByteArray;
 	
 }
 

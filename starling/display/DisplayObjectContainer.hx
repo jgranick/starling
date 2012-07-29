@@ -6,12 +6,12 @@ import starling.events.Event;
 
 extern class DisplayObjectContainer extends DisplayObject {
 	
-	function new ():Void;
+	//function new ():Void;
 	
-	function addChild (child:DisplayObject):Void;
-	function addChildAt (child:DisplayObject, index:Int):Void;
-	function removeChild (child:DisplayObject, dispose:Bool = false):Void;
-	function removeChildAt (index:Int, dispose:Bool = false):Void;
+	function addChild (child:DisplayObject):DisplayObject;
+	function addChildAt (child:DisplayObject, index:Int):DisplayObject;
+	function removeChild (child:DisplayObject, dispose:Bool = false):DisplayObject;
+	function removeChildAt (index:Int, dispose:Bool = false):DisplayObject;
 	function removeChildren (beginIndex:Int = 0, endIndex:Int = -1, dispose:Bool = false):Void;
 	function getChildAt (index:Int):DisplayObject;
 	function getChildByName (name:String):DisplayObject;
@@ -22,6 +22,7 @@ extern class DisplayObjectContainer extends DisplayObject {
 	function sortChildren (compareFunction:Dynamic):Void;
 	function contains (child:DisplayObject):Bool;
 	function broadcastEvent (event:Event):Void;
+	function broadcastEventWith (type:String, data:Dynamic = null):Void;
 	
 	var numChildren (default, null):Int;
 	
