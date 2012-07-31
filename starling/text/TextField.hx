@@ -4,12 +4,14 @@ package starling.text;
 import flash.display.BitmapData;
 import flash.geom.Rectangle;
 
+import starling.display.DisplayObjectContainer;
+
 
 extern class TextField extends DisplayObjectContainer {
 	
-	function new (width:int, height:Int, text:String, fontName:String, fontSize:Float = 12, char:UInt = 0x0, bold:Bool):Void;
+	function new (width:Int, height:Int, text:String, fontName:String, fontSize:Float = 12, char:UInt = 0x0, bold:Bool):Void;
 	
-	public dispose ():Void;
+	public override function dispose ():Void;
 	
 	var textBounds (default, null):Rectangle;
 	var text:String;
@@ -17,7 +19,7 @@ extern class TextField extends DisplayObjectContainer {
 	var fontSize:Float;
 	var color:UInt;
 	var hAlign:String;
-	var vAlign::String;
+	var vAlign:String;
 	var border:Bool;
 	var bold:Bool;
 	var italic:Bool;

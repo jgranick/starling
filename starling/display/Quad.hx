@@ -14,7 +14,6 @@ extern class Quad extends DisplayObject {
 	function setVertexAlpha (vertexID:Int, alpha:Float):Void;
 	
 	var color:UInt;
-	var alpha (default, null):Float;
 	function copyVertexDataTo (targetData:VertexData, targetVertexID:Int = 0):Void;
 	
 	var tinted (default, null):Bool;
