@@ -44,7 +44,6 @@ extern class DisplayObject extends EventDispatcher {
 	var name:String;
 	var parent (default, null):DisplayObjectContainer;
 	var base (default, null):DisplayObject;
-	var root (default, null):DisplayObject;
 	var stage (default, null):Stage;
 	
 }

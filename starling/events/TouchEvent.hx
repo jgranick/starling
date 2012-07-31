@@ -1,6 +1,8 @@
 package starling.events;
 
 
+import flash.Vector;
+
 import starling.display.DisplayObject;
 
 
