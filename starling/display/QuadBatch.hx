@@ -1,8 +1,11 @@
 package starling.display;
 
 
+import flash.Vector;
+import flash.geom.Matrix;
 import flash.geom.Matrix3D;
 
+import starling.textures.Texture;
 
 extern class QuadBatch extends DisplayObject {
 	
@@ -14,7 +17,7 @@ extern class QuadBatch extends DisplayObject {
 	function addImage (image:Image, parentAlpha:Float = 1.0, modelViewMatrix:Matrix = null, blendMode:String = null):Void;
 	function addQuad (quad:Quad, parentAlpha:Float = 1.0, texture:Texture = null, smoothing:String = null, modelViewMatrix:Matrix = null, blendMode:String = null):Void;
 	function addQuadBatch (quadBatch:QuadBatch, parentAlpha:Float = 1.0, modelViewMatrix:Matrix = null, blendMode:String = null):Void;
-	function isStateChange (tinted:Bool, parentAlpha:Number, texture:Texture, smoothing:String, blendMode:String, numQuads:Int = 1):Bool;
+	function isStateChange (tinted:Bool, parentAlpha:Float, texture:Texture, smoothing:String, blendMode:String, numQuads:Int = 1):Bool;
 	static function compile (container:DisplayObjectContainer, quadBatches:Vector<QuadBatch>):Void;
 	
 	var numQuads (default, null):Int;

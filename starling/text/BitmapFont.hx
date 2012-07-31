@@ -1,7 +1,11 @@
 package starling.text;
 
 
+import flash.xml.XML;
+
 import starling.display.QuadBatch;
+import starling.display.Sprite;
+import starling.textures.Texture;
 
 
 extern class BitmapFont {
