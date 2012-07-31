@@ -2,5 +2,7 @@
 <project>
 	
 	<compilerflag name="-swf-lib starling.swf" if="flash" />
+	<compilerflag name="--macro patchTypes('starling.patch')" if="flash" />
+	<app swf-version="11" />
 	
 </project>
