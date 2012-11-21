@@ -8,6 +8,10 @@ extern class Juggler implements IAnimatable {
 	function new ():Void;
 	
 	function add (object:IAnimatable):Void;
+	
+	/** Determines if an object has been added to the juggler. */
+    function contains(object:IAnimatable):Bool;
+	
 	function remove (object:IAnimatable):Void;
 	function removeTweens (target:Dynamic):Void;
 	function purge ():Void;

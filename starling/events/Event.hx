@@ -12,6 +12,7 @@ extern class Event {
 	static var FLATTEN:String;
 	static var RESIZE:String;
 	static var COMPLETE:String;
+	static var CHANGE:String;
 	static var CONTEXT3D_CREATE:String;
 	static var ROOT_CREATED:String;
 	static var REMOVE_FROM_JUGGLER:String;

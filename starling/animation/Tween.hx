@@ -4,14 +4,16 @@ package starling.animation;
 import starling.events.EventDispatcher;
 
 
-extern class Tween extends EventDispatcher implements IAnimatable {
+extern class Tween extends EventDispatcher, implements IAnimatable {
 	
-	var isComplete (default, null):Bool
+	var isComplete (default, null):Bool;
 	var target (default, null):Dynamic;
 	var transition (default, null):String;
 	var totalTime (default, null):Float;
 	var currentTime (default, null):Float;
 	var delay:Float;
+	var repeatCount:Int;
+	
 	var roundToInt:Bool;
 	var onStart:Dynamic;
 	var onUpdate:Dynamic;

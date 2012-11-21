@@ -1,9 +1,7 @@
 package starling.animation;
 
-
 extern class Transitions {
 
-	static var LINEAR:String;
 	static var LINEAR:String;
 	static var EASE_IN:String;
 	static var EASE_OUT:String;
