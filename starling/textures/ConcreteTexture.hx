@@ -1,6 +1,6 @@
 package starling.textures;
 
-import flash.display3D.textures.TextureBase;;
+import flash.display3D.textures.TextureBase;
 
 extern class ConcreteTexture extends Texture {
 	

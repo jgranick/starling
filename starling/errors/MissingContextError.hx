@@ -1,4 +1,5 @@
 package starling.errors;
+import flash.errors.Error;
 
 
 extern class MissingContextError extends Error {

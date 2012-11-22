@@ -16,7 +16,7 @@ extern class Texture {
 	function dispose ():Void;
 	static function fromBitmap (data:Bitmap, generateMipMaps:Bool = true, optimizeForRenderTexture:Bool = false, scale:Float = 1):Texture;
 	static function fromBitmapData (data:BitmapData, generateMipMaps:Bool = true, optimizeForRenderTexture:Bool = false, scale:Float = 1):Texture;
-	static function fromAtfData (data:ByteArray, scale:Float = 1):Texture;
+	static function fromAtfData (data:ByteArray, scale:Float = 1, useMipMaps:Bool=true):Texture;
 	static function fromTexture (texture:Texture, region:Rectangle = null, frame:Rectangle = null):Texture;
 	static function empty (width:Int = 64, height:Int = 64, color:UInt = 0xFFFFFF, optimizeForRenderTexture:Bool = false, scale:Float = -1):Texture;
 	function adjustVertexData (vertexData:VertexData, vertexID:Int, count:Int):Void;
@@ -31,4 +31,12 @@ extern class Texture {
 	var mipMapping (default, null):Bool;
 	var premultipliedAlpha (default, null):Bool;
 	
+	/** The width of the texture in pixels (without scale adjustment). */
+	var nativeWidth(default, default):Float;
+	
+	/** The height of the texture in pixels (without scale adjustment). */
+	var nativeHeight(default, default):Float;
+	
+	/** The concrete (power-of-two) texture the texture is based on. */
+	var root(default, null):ConcreteTexture;
 }
