@@ -22,11 +22,9 @@ import flash.errors.IllegalOperationError;
 import flash.geom.Matrix;
 import flash.geom.Rectangle;
 import flash.system.Capabilities;
-import flash.utils.getQualifiedClassName;
 
 import starling.core.RenderSupport;
 import starling.core.Starling;
-import starling.core.starling_internal;
 import starling.display.BlendMode;
 import starling.display.DisplayObject;
 import starling.display.Image;
@@ -39,7 +37,6 @@ import starling.textures.Texture;
 import starling.utils.MatrixUtil;
 import starling.utils.RectangleUtil;
 import starling.utils.VertexData;
-import starling.utils.getNextPowerOfTwo;
 
 /** The FragmentFilter class is the base class for all filter effects.
 *
@@ -55,19 +52,19 @@ extern class FragmentFilter {
 	@:protected private var STD_FRAGMENT_SHADER:String;
 	
 	/** The ID of the vertex buffer attribute storing the vertex position. */
-	@:protected var mVertexPosAtID:int = 0;
+	@:protected var mVertexPosAtID:Int;// = 0;
 
 	/** The ID of the vertex buffer attribute storing the texture coordinates. */
-	@:protected var mTexCoordsAtID:int = 1;
+	@:protected var mTexCoordsAtID:Int;//1;
 
 	/** The ID (sampler) of the input texture (containing the output of the previous pass). */
-	@:protected var mBaseTextureID:int = 0;
+	@:protected var mBaseTextureID:Int;//0;
 
 	/** The ID of the first register of the MVP matrix constant (a 4x4 matrix). */
-	@:protected var mMvpConstantID:int = 0;
+	@:protected var mMvpConstantID:Int;//0;
 
 
-	public function new(numPasses:Int = 1, resolution:Float = 1.0):Void;
+	public function new(numPasses:Int=1, resolution:Float = 1.0):Void;
 
 	public function dispose():Void;
 	
@@ -77,9 +74,9 @@ extern class FragmentFilter {
 	
 	@:protected private function createPrograms():Void;
 
-	@:protected private function activate(pass:int, context:Context3D, texture:Texture):Void;
+	@:protected private function activate(pass:Int, context:Context3D, texture:Texture):Void;
 
-	@:protected private function deactivate(pass:int, context:Context3D, texture:Texture):Void;
+	@:protected private function deactivate(pass:Int, context:Context3D, texture:Texture):Void;
 
 	@:protected private function assembleAgal(fragmentShader:String = null, vertexShader:String = null):Program3D;
 

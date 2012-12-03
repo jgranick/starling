@@ -5,7 +5,7 @@ import flash.geom.Rectangle;
 extern class RectangleUtil {
 	
 	/** @private */
-	private function new();
+	private function new():Void;
 	
 	/** Calculates the intersection between two Rectangles. If the rectangles do not intersect,
 	 *  this method returns an empty Rectangle object with its properties set to 0. */
