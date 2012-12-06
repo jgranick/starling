@@ -21,4 +21,8 @@ extern class Button extends DisplayObjectContainer {
 	var downState:Texture;
 	var textBounds:Rectangle;
 	
+	/** The vertical alignment of the text on the button. */
+	var textVAlign:String;
+	/** The horizontal alignment of the text on the button. */
+    var textHAlign:String;   
 }

@@ -19,4 +19,6 @@ extern class TextureAtlas {
 	function addRegion (name:String, region:Rectangle, frame:Rectangle = null):Void;
 	function removeRegion (name:String):Void;
 	
+	/** Returns all texture names that start with a certain string, sorted alphabetically. */
+    public function getNames(?prefix:String=""):Vector<String>;    
 }
