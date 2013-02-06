@@ -18,7 +18,7 @@ import starling.events.TouchPhase;
 
 extern class Starling extends EventDispatcher {
 	
-	static var VERSION:String = "1.2";
+	static var VERSION:String = "1.3";
 	
 	function new (rootClass:Dynamic, stage:flash.display.Stage, viewPort:Rectangle = null, stage3D:Stage3D = null, renderMode:String = "auto", profile:String = "baselineConstrained"):Void;
 	
@@ -37,6 +37,10 @@ extern class Starling extends EventDispatcher {
 	var isStarted (default, null):Bool;
 	//var juggler (default, null):Juggler;
 	//var context (default, null):Context3D;
+	
+	/** The Context3D profile as requested in the constructor. Beware that if you are using a shared context, this might not be accurate. */
+    public var profile(default, null):String;
+       
 	var simulateMultitouch:Bool;
 	var enableErrorChecking:Bool;
 	var antiAliasing:Int;
@@ -60,5 +64,4 @@ extern class Starling extends EventDispatcher {
 	static var contentScaleFactor (default, null):Float;
 	static var multitouchEnabled:Bool;
 	static var handleLostContext:Bool;
-	
 }

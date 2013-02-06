@@ -1,5 +1,6 @@
 package starling.errors;
 
+import flash.errors.Error;
 
 extern class AbstractClassError extends Error {
 	
