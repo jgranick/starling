@@ -7,7 +7,7 @@ import starling.textures.Texture;
 import flash.Vector;
 
 
-extern class MovieClip extends Image /*implements IAnimatable*/ {
+extern class MovieClip extends Image, implements IAnimatable {
 	
 	function new (textures:Vector<Texture>, fps:Float = 12):Void;
 	
@@ -23,6 +23,7 @@ extern class MovieClip extends Image /*implements IAnimatable*/ {
 	function play ():Void;
 	function pause ():Void;
 	function stop ():Void;
+	function advanceTime (time:Float):Void;
 	
 	var isComplete (default, null):Bool;
 	var totalTime (default, null):Float;
